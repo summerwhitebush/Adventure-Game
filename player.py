@@ -1,11 +1,4 @@
-
-
-
-try:
-    import pygame
-except ModuleNotFoundError:
-    pygame = None
-
+import pygame
 
 class _Rect:
     def __init__(self, x, y, width, height):
