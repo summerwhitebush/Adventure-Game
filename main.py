@@ -1,4 +1,11 @@
-import pygame
+try:
+    import pygame
+except ModuleNotFoundError as error:
+    if error.name != "pygame":
+        raise
+    raise SystemExit(
+        "Pygame is not installed. Install it with: python -m pip install pygame"
+    ) from error
 from player import Player
 
 pygame.init()
